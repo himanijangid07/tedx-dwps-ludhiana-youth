@@ -140,3 +140,125 @@ body {
 .bw-to-color:hover {
     filter: grayscale(0%); /* Remove grayscale effect */
 }
+
+/* Contact Us Form */
+.contact {
+    background-color: #f8f9fa;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+textarea.form-control {
+    resize: none; /* Prevent resizing of textarea */
+}
+
+.contact button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #c70021; /* Darker shade of the button color on hover */
+}
+
+/* Make form responsive */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 40px 0;
+    }
+
+    .col-lg-6, .col-md-8 {
+        width: 100%;
+    }
+
+    .form-control, .btn {
+        width: 100%;
+    }
+}
+
+.rules-box {
+    background-color: #f9f9f9;
+    border-left: 5px solid #eb0028;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+}
+
+.custom-list li::before {
+    content: "✔";
+    color: #eb0028;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Default navbar styling for larger screens */
+.navbar {
+    padding: 1rem 2rem; /* Keep padding for large screens */
+}
+
+/* Navbar styling for small screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Reduce top and bottom padding */
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem; /* Adjust button padding */
+    }
+
+    .navbar-brand img {
+        max-width: 100%; /* Keep image size as is */
+    }
+
+    .navbar-nav {
+        padding-top: 0.25rem; /* Reduce space between navbar items */
+    }
+
+    .nav-item {
+        padding: 0.5rem 0; /* Reduce the padding on nav items */
+    }
+
+    .nav-link {
+        font-size: 14px; /* Reduce font size on mobile */
+    }
+}
+
+/* Optional: For very small screens like phones in portrait mode */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.20rem 0.4rem; /* Further reduce padding */
+    }
+
+    .nav-link {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem; /* Adjust button padding for very small screens */
+    }
+    body {
+        margin-top: 150px !important;
+    }
+}
