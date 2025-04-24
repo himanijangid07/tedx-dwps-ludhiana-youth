@@ -4,6 +4,9 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php'; // If using Composer
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -11,13 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $mail = new PHPMailer(true);
     try {
-        $mail->isSMTP();
-        $mail->Host = 'smtp.hostinger.com';
+        $smtpHost = $_ENV['SMTP_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Username = 'contact@tedxdwpsludhianayouth.com';
-        $mail->Password = 'Contact@dwps123';
+        $smtpUsername = $_ENV['SMTP_USERNAME'];
+        $smtpPassword = $_ENV['SMTP_PASSWORD'];
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port = 465;
+        $smtpPort = $_ENV['SMTP_PORT'];
 
         $mail->setFrom('contact@tedxdwpsludhianayouth.com', 'Website Contact Form');
         $mail->addAddress('contact@tedxdwpsludhianayouth.com'); // Send to yourself
