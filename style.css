@@ -56,12 +56,26 @@ body {
     color: var(--color-red);
 }
 
+#colorStarsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 .hero {
-    background-color: var(--color-black);
-    min-height: 100vh; /* Less than full screen */
-    display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center;
+    position: relative;
+    background-color: black;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero .container {
+    z-index: 1;
+    position: relative;
 }
 
 .copyright {
@@ -96,4 +110,33 @@ body {
     .responsive-heading {
         font-size: 64px; /* Medium devices (tablets) */
     }
+}
+
+@media screen and (max-width: 360px) {
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 180px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
+
+/* Container for the image */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Initially black and white image with smooth transition */
+.bw-to-color {
+    transition: filter 1s ease-in-out; /* Smooth transition effect */
+    filter: grayscale(100%); /* Set image to black and white */
+    width: 100%; /* Ensure the image fits within the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Hover effect - image turns colorful with smooth transition */
+.bw-to-color:hover {
+    filter: grayscale(0%); /* Remove grayscale effect */
 }
