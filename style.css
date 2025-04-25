@@ -269,3 +269,11 @@ textarea.form-control {
         margin-top: 150px !important;
     }
 }
+
+.team-content {
+    background-color: black;
+}
+
+.team-content h4 {
+    color: #eb0028;
+}

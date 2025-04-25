@@ -221,3 +221,15 @@ window.onload = function () {
     createStars(); // Initialize stars
     animate(); // Start the animation
 };
+
+document.querySelectorAll('.image-container').forEach(card => {
+    card.addEventListener('click', () => {
+        const name = card.getAttribute('data-name');
+        const img = card.getAttribute('data-img');
+        const intro = card.getAttribute('data-intro');
+
+        document.getElementById('speakerModalLabel').textContent = name;
+        document.getElementById('modalImage').src = img;
+        document.getElementById('modalIntro').textContent = intro;
+    });
+});
