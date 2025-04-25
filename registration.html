@@ -58,38 +58,13 @@
         </nav>
     </div>
 
-    <div class="container-fluid py-5 speaker-registration">
-        <div class="container">
+    <div class="container-fluid py-5 speaker-registration" style="min-height: 78vh; display: flex; align-items: center;">
+        <div class="container text-center">
             <h2 class="fw-bold pb-4 text-center" style="color: #eb0028;">Speaker Nomination</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 col-sm-12">
-                    <form action="registerSpeaker.php" method="POST" id="speakerForm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="topic" class="form-label">Proposed Talk Topic</label>
-                            <input type="text" class="form-control" id="topic" name="topic" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="about" class="form-label">Brief About Yourself</label>
-                            <textarea class="form-control" id="about" name="about" rows="4" required></textarea>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn fw-bold" style="background-color: #eb0028; color: white;">Submit Registration</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <p>If you wish to be a part of TEDxDWPS Ludhiana as a speaker, please fill out this form.</p>
+            <button class="btn px-4 py-2" style="background-color: #eb0028; width: auto;">
+                <a class="text-decoration-none text-white" href="https://forms.gle/t5aQ6GfiukxjYG1AA" target="_blank">Click to nominate</a>
+            </button>
         </div>
     </div>
 
