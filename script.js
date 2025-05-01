@@ -233,3 +233,16 @@ document.querySelectorAll('.image-container').forEach(card => {
         document.getElementById('modalIntro').textContent = intro;
     });
 });
+
+function toggleReadMore() {
+    const moreText = document.getElementById("moreText");
+    const btn = document.getElementById("readMoreBtn");
+
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        btn.innerText = "Read Less";
+    } else {
+        moreText.style.display = "none";
+        btn.innerText = "Read More";
+    }
+}
