@@ -137,15 +137,8 @@ body {
 
 /* Initially black and white image with smooth transition */
 .bw-to-color {
-    transition: filter 1s ease-in-out; /* Smooth transition effect */
-    filter: grayscale(100%); /* Set image to black and white */
     width: 100%; /* Ensure the image fits within the container */
     height: auto; /* Maintain aspect ratio */
-}
-
-/* Hover effect - image turns colorful with smooth transition */
-.bw-to-color:hover {
-    filter: grayscale(0%); /* Remove grayscale effect */
 }
 
 /* Contact Us Form */
@@ -276,6 +269,7 @@ textarea.form-control {
 
 .team-content {
     background-color: black;
+    height: 130px;
 }
 
 .team-content h4 {
